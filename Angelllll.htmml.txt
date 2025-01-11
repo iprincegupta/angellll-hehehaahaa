@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Anjali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 20%;
+        }
+        h1 {
+            color: #ff3366;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #45a049;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+        .no:hover {
+            background-color: #da190b;
+        }
+        #heart {
+            display: none;
+            font-size: 100px;
+            color: #ff3366;
+            animation: grow 2s infinite;
+        }
+        @keyframes grow {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Myy Angellllll,</h1>
+        <p>You are the most beautiful person, and I adore you, i love you! ❤️</p>
+        <p>Will you be mine forever?</p>
+        <button class="yes" onclick="showHeart()">YES</button>
+        <button class="no" id="noButton" onmouseover="moveNoButton()">NO</button>
+        <div id="heart">❤️</div>
+    </div>
+
+    <script>
+        function showHeart() {
+            document.getElementById('heart').style.display = 'block';
+        }
+
+        function moveNoButton() {
+            const noButton = document.getElementById('noButton');
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.position = 'absolute';
+            noButton.style.left = x + 'px';
+            noButton.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
